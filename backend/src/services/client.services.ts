@@ -1,4 +1,3 @@
-import { error } from "node:console";
 import { pool } from "../databse/connection.js";
 import { Cliente, CriarCliente } from "../types/cliente.js";
 
@@ -23,6 +22,23 @@ class ClienteService {
     }
 
     return cliente;
+  }
+
+  async getById(id: string): Promise<Cliente[]> {
+    const res = await pool.query<Cliente>(
+      "SELECT * FROM clientes WHERE id = $1",
+      [id],
+    );
+    return res.rows;
+  }
+
+  async inativarCliente(id: string): Promise<boolean> {
+    const res = await pool.query(
+      "UPDATE clientes SET status='inativo' WHERE id = $1",
+      [id],
+    );
+
+    return (res.rowCount ?? 0) > 0;
   }
 }
 

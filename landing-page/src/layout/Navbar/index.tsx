@@ -1,30 +1,39 @@
-import { MdOutlinePets } from "react-icons/md";
 import { MdAddCircleOutline } from "react-icons/md";
 import Button from "../../components/Button";
 
 export default function Navbar() {
   return (
-    <header className="px-5 md:px-20 py-6 flex items-center justify-between border-b border-b-[rgba(21,50,41,0.14)]">
-      <div className="flex gap-2">
-        <MdOutlinePets size={24} color="#3F9271" />
-        <p className="font-black text-[#153229]">pet</p>
-        <p className="font-black text-[#FF6B4A]">care</p>
+    <header className="px-5 md:px-20 py-6 flex items-center justify-between border-b border-b-black/10">
+      <div className="flex items-center gap-3">
+        <img
+          src="/barberlogo.png"
+          alt="Barbearia do Ambiente"
+          className="w-10 h-10 object-contain"
+        />
+
+        <div className="flex items-center gap-1 font-black uppercase">
+          <p className="text-[#111111]">barbearia</p>
+          <p className="text-[#D90000]">do</p>
+          <p className="text-[#111111]">ambiente</p>
+        </div>
       </div>
 
       <nav>
         <ul className="flex items-center gap-5 md:gap-10">
           <li>
-            <a href="" className="text-xs md:text-base text-[#1F4136]">
+            <a href="" className="text-xs md:text-base text-[#111111]">
               Inicio
             </a>
           </li>
+
           <li>
-            <a href="" className="text-xs md:text-base text-[#1F4136]">
+            <a href="" className="text-xs md:text-base text-[#111111]">
               Funcionalidades
             </a>
           </li>
+
           <li>
-            <a href="" className="text-xs md:text-base text-[#1F4136]">
+            <a href="" className="text-xs md:text-base text-[#111111]">
               Contato
             </a>
           </li>
@@ -32,13 +41,14 @@ export default function Navbar() {
       </nav>
 
       <Button
-        text={"Agendar Consulta"}
-        backgroundColor={"bg-[#182420]"}
+        text={"Agendar"}
+        backgroundColor={"bg-[#111111]"}
         textColor={"text-white"}
         fontSize={"text-sm"}
         link=""
       />
-      <a href="" className="block md:hidden bg-[#182420] p-1.5 rounded-full">
+
+      <a href="" className="block md:hidden bg-[#111111] p-1.5 rounded-full">
         <MdAddCircleOutline color="#fff" size={14} />
       </a>
     </header>

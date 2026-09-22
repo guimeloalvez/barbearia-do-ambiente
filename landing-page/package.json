@@ -10,8 +10,14 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@iconify-react/fluent-emoji-high-contrast": "gitlab:iconify-icons/react#fluent-emoji-high-contrast",
+    "@iconify/react": "^6.0.2",
+    "@tailwindcss/vite": "^4.3.3",
+    "iconify": "^1.4.0",
     "react": "^19.2.8",
-    "react-dom": "^19.2.8"
+    "react-dom": "^19.2.8",
+    "react-icons": "^5.7.0",
+    "tailwindcss": "^4.3.3"
   },
   "devDependencies": {
     "@babel/core": "^7.29.7",
