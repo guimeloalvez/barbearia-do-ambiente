@@ -1,5 +1,5 @@
-import { FaPlus } from "react-icons/fa";
-import { HairPickIcon } from "gitlab:iconify-icons/react#fluent-emoji-high-contrast/hair-pick";
+// import { FaPlus } from "react-icons/fa"
+import { Icon } from "@iconify/react";
 import { IoMdStar } from "react-icons/io";
 import Button from "../../components/Button";
 
@@ -7,7 +7,12 @@ export default function Hero() {
   return (
     <section className="flex flex-col items-center justify-center py-20">
       <div className="flex items-center gap-2 bg-[#E5E3DF] p-2.5 rounded-full">
-        <HairPickIcon size={18} color="#111111" />
+        <Icon
+          icon="fluent-emoji-high-contrast:hair-pick"
+          width="18"
+          height="18"
+          style={{ color: "#111111" }}
+        />
         <p className="text-[#111111] text-sm font-bold">
           Por isso tomamos as ruas
         </p>
